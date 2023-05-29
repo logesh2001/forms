@@ -1,0 +1,10 @@
+<input type="text" placeholder="Enter task " [(ngModel)]="addTaskValue">
+<button  type="button" (click)="addTask()">+</button>
+<ul *ngFor="let task of taskArr">
+  <li>{{ task.task_name}}
+   
+    <button  type="button"   (click)="editTask() ">  edit</button>
+    <button type="button" (click)="deleteTask(task)">delete</button>
+  </li>
+</ul>
+

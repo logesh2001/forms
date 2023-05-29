@@ -1,0 +1,27 @@
+
+
+
+<div class="form1">
+  <form [formGroup]="form">
+    <label> Full name</label>&nbsp;&nbsp;
+    <input type="text" formControlName="fullname"><br><br>
+    <span class="error" *ngIf=" fullname && fullname.invalid  && fullname.touched  "> Fullname is required</span><br>
+
+    <label> Email</label>&nbsp;&nbsp;
+    <input type="email" formControlName="email"><br><br>
+    <span class="error" *ngIf="email && email.invalid && email.touched"> Enter a valid email</span><br>
+
+    <label> Street</label>&nbsp;&nbsp;
+    <input type="text" formControlName="street"><br><br>
+    <span class="error" *ngIf=" street&& street.invalid && street.touched"> Street is required</span><br>
+    <label> City</label>&nbsp;&nbsp;
+    <input type="text" formControlName="city"><br><br>
+    <span class="error" *ngIf="city && city.invalid && city.touched"> City is required</span><br>
+    <label> Zip</label>&nbsp;&nbsp;
+    <input type="text" formControlName="zip"><br><br>
+    <span class="error" *ngIf="zip && zip.invalid && zip.touched"> Zip is required</span><br>
+
+    <button type="submit" [disabled]="!form.valid">save</button>
+
+  </form>
+</div>
